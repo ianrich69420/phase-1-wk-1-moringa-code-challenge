@@ -35,14 +35,14 @@ function speedDetector(speed) { //Defining the function that will calculate the 
 function netSalaryCalculator(basicSalary, benefits = 0) { //Defining the function that will take in the basic salary of the individual
   let grossSalary = basicSalary + benefits; //Defining the gross salary of the individual
   let tax; //Defining the tax applied to the basic salary
-  let paye;
-  let nhifDeduction;
-  let taxableIncome;
-  let pensionContributionPercentage = 0.06;
-  let nssfDeduction = pensionContributionPercentage * grossSalary;
-  let nssfDeductionTierOneMax = 6000;
-  let nssfDeductionTierTwoMax = 18000;
-  let netSalary;
+  let paye; //Defining the Pay As You Earn (PAYE) tax
+  let nhifDeduction; //Defining the deduction taken by the NHIF
+  let payeTaxableIncome; //Defining the income taxable by the PAYE tax
+  let pensionContributionPercentage = 0.06; //Defining the percentage of the gross salary taken by the NSSF
+  let nssfDeduction = pensionContributionPercentage * grossSalary; //Defining the deduction taken by the NSSF
+  let nssfDeductionTierOneMax = 6000; //Defining the limit of pensionable pay for the tier 1 contribution to the NSSF
+  let nssfDeductionTierTwoMax = 18000; //Defining the limit of pensionable pay for the tier 2 contribution to the NSSF
+  let netSalary; //Defining the net salary of the individual
 
   if (grossSalary > 0 && grossSalary <= 5999) { //if statements that calculate the neccessary nhif deduction
     nhifDeduction = 150
@@ -98,33 +98,33 @@ function netSalaryCalculator(basicSalary, benefits = 0) { //Defining the functio
   }
 
   if (nssfDeduction > 0 && nssfDeduction < nssfDeductionTierOneMax) { //if statements that calculate the necessary nssf deduction
-    taxableIncome = grossSalary - nhifDeduction - nssfDeduction
+    payeTaxableIncome = grossSalary - nhifDeduction - nssfDeduction
     console.log(`Your NSSF Deduction is Tier 1 of amount ${nssfDeduction}`)
   } else if (nssfDeduction > nssfDeductionTierOneMax && nssfDeduction <= nssfDeductionTierTwoMax) {
-    taxableIncome = grossSalary - nhifDeduction - nssfDeduction
+    payeTaxableIncome = grossSalary - nhifDeduction - nssfDeduction
     console.log(`Your NSSF Deduction is Tier 2 of amount ${nssfDeduction}`)
   } else if (nssfDeduction > nssfDeductionTierTwoMax) {
-    taxableIncome = grossSalary - nhifDeduction - nssfDeductionTierTwoMax
+    payeTaxableIncome = grossSalary - nhifDeduction - nssfDeductionTierTwoMax
     console.log(`Your NSSF Deduction is Tier 2 of amount ${nssfDeductionTierTwoMax}`)
   }
 
-  if (taxableIncome > 0 && taxableIncome <= 24000) { //if statements that calculate the Pay As You Earn (PAYE) tac
+  if (payeTaxableIncome > 0 && payeTaxableIncome <= 24000) { //if statements that calculate the Pay As You Earn (PAYE) tac
     tax = 0.1
-    paye = tax * taxableIncome;
-    netSalary = taxableIncome - paye
+    paye = tax * payeTaxableIncome;
+    netSalary = payeTaxableIncome - paye
     console.log(`Your PAYE is ${paye}`)
-  } else if (taxableIncome > 24000 && taxableIncome <= 32333) {
+  } else if (payeTaxableIncome > 24000 && payeTaxableIncome <= 32333) {
     tax = 0.25
-    paye = tax * taxableIncome;
-    netSalary = taxableIncome - paye
+    paye = tax * payeTaxableIncome;
+    netSalary = payeTaxableIncome - paye
     console.log(`Your PAYE is ${paye}`)
-  } else if (taxableIncome > 32333) {
+  } else if (payeTaxableIncome > 32333) {
     tax = 0.3
-    paye = tax * taxableIncome;
-    netSalary = taxableIncome - paye
+    paye = tax * payeTaxableIncome;
+    netSalary = payeTaxableIncome - paye
     console.log(`Your PAYE is ${paye}`)
   }
 
-  console.log(`Your Gross Salary is ${grossSalary}`)
-  console.log(`Your Net Salary is ${netSalary}`)
+  console.log(`Your Gross Salary is ${grossSalary}`) //prints out the individual's gross salary
+  console.log(`Your Net Salary is ${netSalary}`) //prints out the individual's gross salary
 }
