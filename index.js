@@ -32,7 +32,7 @@ function speedDetector(speed) { //Defining the function that will calculate the 
     }
   }
   
-function netSalaryCalculator(basicSalary, benefits = 7) {
+function netSalaryCalculator(basicSalary) {
   let tax;
   let payee;
   let grossSalary;
@@ -107,6 +107,7 @@ function netSalaryCalculator(basicSalary, benefits = 7) {
     nhifDeduction = 1700
     console.log(`Your NHIF Deduction is ${nhifDeduction}`)
   }
+  
   let pensionContributionPercentage = 0.06
   let nssfDeduction = pensionContributionPercentage * grossSalary;
 
