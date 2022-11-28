@@ -32,25 +32,28 @@ function speedDetector (speed) { //Defining the function that will calculate the
         }
 }
 
-function netSalaryCalculator (basicSalary, benefits) {
+function netSalaryCalculator (basicSalary, benefits = 7) {
     let tax;
-    let payee = tax * basicSalary;
+    let payee;
     let nhifDeduction;
     let pensionablePay = 0.06 * basicSalary
-    let grossSalary = payee
-    let netSalary = payee - nhifDeduction - pensionablePay
+    let grossSalary;
+    let netSalary;
     if (basicSalary > 0 && basicSalary <= 24000) {
         tax = 0.1
-        console.log(`Your tax is ${payee}`)
+        payee = tax * basicSalary;
+        console.log(`Your payee is ${payee}`)
     }   else if (basicSalary > 24000 && basicSalary <= 32333) {
             tax = 0.25
-            console.log(`Your tax is ${payee}`)
-        } else if (basicSalary > 32333) {
+            payee = tax * basicSalary;
+            console.log(`Your payee is ${payee}`)
+        }   else if (basicSalary > 32333) {
                 tax = 0.3
+                payee = tax * basicSalary;
                 console.log(`Your payee is ${payee}`)
             }
 
-    if (basicSalary <= 5999) {
+    if (basicSalary > 0 && basicSalary <= 5999) {
         nhifDeduction = 150
         console.log(`Your NHIF Deduction is ${nhifDeduction}`)   
     }   else if (basicSalary > 5999 && basicSalary <= 7999) {
@@ -62,62 +65,55 @@ function netSalaryCalculator (basicSalary, benefits) {
             }   else if (basicSalary > 11999 && basicSalary <= 14999) {
                     nhifDeduction = 500 
                     console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                }   else if (basicSalary > 5999 && basicSalary <= 7999) {
-                        nhifDeduction = 300
+                }   else if (basicSalary > 14999 && basicSalary <= 19999) {
+                        nhifDeduction = 600
                         console.log(`Your NHIF Deduction is ${nhifDeduction}`) 
-                    }   else if (basicSalary > 7999 && basicSalary <= 11999) {
-                            nhifDeduction = 400 
+                    }   else if (basicSalary > 19999 && basicSalary <= 24999) {
+                            nhifDeduction = 750
                             console.log(`Your NHIF Deduction is ${nhifDeduction}`)    
-                        }   else if (basicSalary > 11999 && basicSalary <= 14999) {
-                                nhifDeduction = 500 
+                        }   else if (basicSalary > 24999 && basicSalary <= 29999) {
+                                nhifDeduction = 850
                                 console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                            }   else if (basicSalary > 14999 && basicSalary <= 19999) {
-                                    nhifDeduction = 600
+                            }   else if (basicSalary > 29999 && basicSalary <= 34999) {
+                                    nhifDeduction = 900
                                     console.log(`Your NHIF Deduction is ${nhifDeduction}`) 
-                                }   else if (basicSalary > 19999 && basicSalary <= 24999) {
-                                        nhifDeduction = 750 
+                                }   else if (basicSalary > 34999 && basicSalary <= 39999) {
+                                        nhifDeduction = 950
                                         console.log(`Your NHIF Deduction is ${nhifDeduction}`)    
-                                    }   else if (basicSalary > 24999 && basicSalary <= 29999) {
-                                            nhifDeduction = 850
+                                    }   else if (basicSalary > 39999 && basicSalary <= 44999) {
+                                            nhifDeduction = 1000
                                             console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                                        }   else if (basicSalary > 29999 && basicSalary <= 34999) {
-                                                nhifDeduction = 900
+                                        }   else if (basicSalary > 44999 && basicSalary <= 49999) {
+                                                nhifDeduction = 1100
                                                 console.log(`Your NHIF Deduction is ${nhifDeduction}`) 
-                                            }   else if (basicSalary > 34999 && basicSalary <= 39999) {
-                                                    nhifDeduction = 950 
+                                            }   else if (basicSalary > 59999 && basicSalary <= 59999) {
+                                                    nhifDeduction = 1200 
                                                     console.log(`Your NHIF Deduction is ${nhifDeduction}`)    
-                                                }   else if (basicSalary > 39999 && basicSalary <= 44999) {
-                                                        nhifDeduction = 1000 
+                                                }   else if (basicSalary > 69999 && basicSalary <= 69999) {
+                                                        nhifDeduction = 1300 
                                                         console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                                                    }   else if (basicSalary > 44999 && basicSalary <= 49999) {
-                                                            nhifDeduction = 1100 
+                                                    }   else if (basicSalary > 79999 && basicSalary <= 79999) {
+                                                            nhifDeduction = 1400 
                                                             console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                                                        }   else if (basicSalary > 49999 && basicSalary <= 59999) {
-                                                                nhifDeduction = 1200
+                                                        }   else if (basicSalary > 89999 && basicSalary <= 89999) {
+                                                                nhifDeduction = 1500
                                                                 console.log(`Your NHIF Deduction is ${nhifDeduction}`) 
-                                                            }   else if (basicSalary > 59999 && basicSalary <= 69999) {
-                                                                    nhifDeduction = 1300 
+                                                            }   else if (basicSalary > 99999) {
+                                                                    nhifDeduction = 1600 
                                                                     console.log(`Your NHIF Deduction is ${nhifDeduction}`)    
-                                                                }   else if (basicSalary > 69999 && basicSalary <= 79999) {
-                                                                        nhifDeduction = 1400
-                                                                        console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                                                                    }   else if (basicSalary > 79999 && basicSalary <= 89999) {
-                                                                            nhifDeduction = 1500
-                                                                            console.log(`Your NHIF Deduction is ${nhifDeduction}`) 
-                                                                        }   else if (basicSalary > 89999 && basicSalary <= 99999) {
-                                                                                nhifDeduction = 1600 
-                                                                                console.log(`Your NHIF Deduction is ${nhifDeduction}`)    
-                                                                            }   else if (basicSalary > 99999) {
-                                                                                    nhifDeduction = 1700 
-                                                                                    console.log(`Your NHIF Deduction is ${nhifDeduction}`)
-                                                                                }   
+                                                                }
+
+
     if (pensionablePay > 0 && pensionablePay < 6000) {
         console.log(`Your Pensionable Pay is Tier 1 of amount ${pensionablePay}`)
     }   else if (pensionablePay > 6000 && pensionablePay <= 18000) {
-            console.log(`Your Pensionable Pay is Tier 1 of amount ${pensionablePay}`)
-        }   else {
+            console.log(`Your Pensionable Pay is Tier 2 of amount ${pensionablePay}`)
+        }   else if (pensionablePay > 18000) {
                 console.log(`Your Pensionable Pay is Tier 2 of amount 18000`)
             }
+    
+    grossSalary = basicSalary - payee
+    netSalary = grossSalary - nhifDeduction - pensionablePay
 
     console.log(grossSalary)
     console.log(netSalary)
