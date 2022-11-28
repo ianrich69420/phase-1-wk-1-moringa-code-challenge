@@ -36,7 +36,7 @@ function netSalaryCalculator (basicSalary, benefits = 7) {
     let tax;
     let payee;
     let nhifDeduction;
-    let pensionablePay = 0.06 * basicSalary
+    let nssfDeduction = 0.06 * basicSalary
     let grossSalary;
     let netSalary;
     if (basicSalary > 0 && basicSalary <= 24000) {
@@ -104,16 +104,16 @@ function netSalaryCalculator (basicSalary, benefits = 7) {
                                                                 }
 
 
-    if (pensionablePay > 0 && pensionablePay < 6000) {
-        console.log(`Your Pensionable Pay is Tier 1 of amount ${pensionablePay}`)
-    }   else if (pensionablePay > 6000 && pensionablePay <= 18000) {
-            console.log(`Your Pensionable Pay is Tier 2 of amount ${pensionablePay}`)
-        }   else if (pensionablePay > 18000) {
+    if (nssfDeduction > 0 && nssfDeduction < 6000) {
+        console.log(`Your Pensionable Pay is Tier 1 of amount ${nssfDeduction}`)
+    }   else if (nssfDeduction > 6000 && nssfDeduction <= 18000) {
+            console.log(`Your Pensionable Pay is Tier 2 of amount ${nssfDeduction}`)
+        }   else if (nssfDeduction > 18000) {
                 console.log(`Your Pensionable Pay is Tier 2 of amount 18000`)
             }
     
     grossSalary = basicSalary - payee
-    netSalary = grossSalary - nhifDeduction - pensionablePay
+    netSalary = grossSalary - nhifDeduction - nssfDeduction
 
     console.log(grossSalary)
     console.log(netSalary)
