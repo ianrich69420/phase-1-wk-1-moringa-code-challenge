@@ -18,22 +18,28 @@ function studentGradeGenerator(marks) { //Defining the function the will generat
 }
 
 function speedDetector(speed) { //Defining the function that will calculate the speeds
+  speed = prompt("Please enter the speed correctly", 70)
   const speedLimit = 75 //Defining the speed limit
   let demeritCount = 0 //Initializing a counter for the demerits
   const maxDemerits = 12 //Defining the maximum number of demerits before license suspension
+
   if (speed > 0 && speed < speedLimit) { //if statement accounting for speeds that are not eligible to receive a demerit
     console.log("Ok")
   } else if (speed >= speedLimit) { //if statement accounting for the amount of demerits the speed is eligible for
     demeritCount = (speed - 70) / 5
     console.log(`Points: ${demeritCount}`)
-    if (demeritCount >= maxDemerits) {
+    if (demeritCount >= maxDemerits) { //if the users demerits are greater than 12 then a message is printed informing them that their license is suspended
       console.log("License suspended")
     }
+  } else {
+    speedDetector(speed) //Accounting for misinputs
   }
 }
 
-function netSalaryCalculator(basicSalary, benefits = 0) { //Defining the function that will take in the basic salary of the individual
-let grossSalary = basicSalary + benefits; //Defining the gross salary of the individual
+function netSalaryCalculator(basicSalary, benefits) { //Defining the function that will take in the basic salary of the individual
+basicSalary = prompt("Please enter the basic salary correctly") //Prompting the user to input their basic salary
+benefits = prompt("Please enter the monetary benefits you received correctly") //Prompting the user to input their benefits
+let grossSalary = Number(basicSalary) + Number(benefits); //Defining the gross salary of the individual
 let tax; //Defining the tax applied to the basic salary
 let paye; //Defining the Pay As You Earn (PAYE) tax
 let nhifDeduction; //Defining the deduction taken by the NHIF
@@ -95,6 +101,8 @@ if (grossSalary > 0 && grossSalary <= 5999) { //if statements that calculate the
 } else if (grossSalary > 99999) {
   nhifDeduction = 1700
   console.log(`Your NHIF Deduction is ${nhifDeduction}`)
+} else {
+  netSalaryCalculator(basicSalary, benefits) //Accounting for misinputs
 }
 
 if (nssfDeduction > 0 && nssfDeduction < nssfDeductionTierOneMax) { //if statements that calculate the necessary nssf deduction

@@ -1,33 +1,50 @@
 # Phase 1 Week 1 Moringa Code Challenge
 
-## Tasks
+# Description
 
-- Challenge 1: Student Grade Generator (Toy Problem)
-Write that prompts the user to input student marks. The input should be between 0 and 100. Then output the correct grade: 
+This is the project made for the first code challenge done in JavaScript, it contains three function that each:
+
+- Prompt a user to input student marks. The input should be between 0 and 100. Then outputs the correct grade: 
 
 A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
 
-- Challenge 2: Speed Detector (Toy Problem)
-Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
+- Take as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
 
 For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
 
-- Challenge 3: Net Salary Calculator (Toy Problem)
-Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
-NB: Use KRA, NHIF, and NSSF values provided in the link below.
-
-https://www.aren.co.ke/payroll/taxrates.htm 
-
-https://www.kra.go.ke/en/individual/calculate-tax/calculating-tax/paye
+- Calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
 
 ## Project Setup
 
-- The project will be setup in JavaScript
+In order for you to use the content on this repo ensure you have the following:
 
-# Learn.co Educational Content License
+A computer that runs on Linux
+nodejs installed
+VSCode installed
 
-Copyright (c) 2017 Flatiron School, Inc.
+- Open a terminal on your computer
+- Clone the repo by using the following:
 
-The Flatiron School, Inc. owns this Educational Content. However, the Flatiron School supports the development and availability of educational materials in the public domain. Therefore, the Flatiron School grants Users of the Flatiron Educational Content set forth in this repository certain rights to reuse, build upon and share such Educational Content subject to the terms of the Educational Content License set forth [here](http://learn.co/content-license) (http://learn.co/content-license). You must read carefully the terms and conditions contained in the Educational Content License as such terms govern access to and use of the Educational Content.
+        git clone https://github.com/otsembo/l1-js-dom.git
 
-Flatiron School is willing to allow you access to and use of the Educational Content only on the condition that you accept all of the terms and conditions contained in the Educational Content License set forth [here](http://learn.co/content-license) (http://learn.co/content-license). By accessing and/or using the Educational Content, you are agreeing to all of the terms and conditions contained in the Educational Content License. If you do not agree to any or all of the terms of the Educational Content License, you are prohibited from accessing, reviewing or using in any way the Educational Content. 
+- After the repository has been cloned succesfully change directory to the repository folder:
+
+        cd l1-js-dom
+
+- Open it in a text editor of your choice, however I personally prefer using VSCode so in order to open the folder in VSCode do the following:
+
+        code .
+
+You can use the following steps to run the app.
+
+- Install required dependencies from npm
+
+      npm install
+
+- Run the application
+
+      npm start
+
+## Author
+This project was contributed to by:
+- [Ian Richard Orieko](https://github.com/ianrich69420/)
