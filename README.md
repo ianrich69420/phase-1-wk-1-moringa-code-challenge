@@ -24,7 +24,7 @@ In order for you to use the content on this repo ensure you have the following:
 
 - A computer that runs on Linux
 - nodejs installed
-- VSCode installed
+- Any text editor such as VSCode installed
 
 ## Instructions
 
