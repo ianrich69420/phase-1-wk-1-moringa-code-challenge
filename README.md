@@ -22,9 +22,9 @@ For example, if the speed is 80, it should print: “Points: 2”. If the driver
 
 In order for you to use the content on this repo ensure you have the following:
 
-A computer that runs on Linux
-nodejs installed
-VSCode installed
+- A computer that runs on Linux
+- nodejs installed
+- VSCode installed
 
 - Open a terminal on your computer
 - Clone the repo by using the following:
