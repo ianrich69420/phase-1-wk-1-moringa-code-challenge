@@ -2,7 +2,7 @@
 
 # Description
 
-This is the project made for the first code challenge done in JavaScript, it contains three function that each:
+This is the project made for the first code challenge done in JavaScript, it contains three functions that each:
 
 - Prompt a user to input student marks. The input should be between 0 and 100. Then outputs the correct grade: 
 
@@ -12,7 +12,11 @@ A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
 
 For example, if the speed is 80, it should print: “Points: 2”. If the driver gets more than 12 points, the function should print: “License suspended”.
 
-- Calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
+- Calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the paye (i.e. Tax), NHIFDeductions, NSSFDeductions, gross salary, and net salary. 
+
+## Extra Features
+
+- One of the extra features of the functions is that they account for misinputs by the user and reprompts the user to reinput their data correctly!
 
 ## Project Setup
 
