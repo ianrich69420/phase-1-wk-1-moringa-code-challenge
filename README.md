@@ -27,6 +27,7 @@ In order for you to use the content on this repo ensure you have the following:
 - VSCode installed
 
 ## Instructions
+
 - Open a terminal on your computer
 - Clone the repo by using the following:
 
