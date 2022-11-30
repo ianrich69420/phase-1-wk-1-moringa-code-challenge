@@ -132,7 +132,7 @@ if (payeTaxableIncome > 0 && payeTaxableIncome <= 24000) { //if statements that 
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
 } else {
-  netSalary = `less than 0, no need to pay tax`
+  netSalary = `less than 0, no need to pay tax` //Accounting for lower than taxable income
 }
 
 console.log(`Your Gross Salary is ${grossSalary}`) //prints out the individual's gross salary
