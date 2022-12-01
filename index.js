@@ -1,3 +1,5 @@
+const prompt=require("prompt-sync")({sigint:true});
+
 function studentGradeGenerator(marks) { //Defining the function the will generate the Student Grades
   marks = prompt("Please enter the student marks correctly", 100) //Prompting the user to input the marks to be converted
 
@@ -26,7 +28,7 @@ function speedDetector(speed) { //Defining the function that will calculate the 
   if (speed > 0 && speed < speedLimit) { //if statement accounting for speeds that are not eligible to receive a demerit
     console.log("Ok")
   } else if (speed >= speedLimit) { //if statement accounting for the amount of demerits the speed is eligible for
-    demeritCount = (speed - 70) / 5
+    demeritCount = Math.floor((speed - 70) / 5)
     console.log(`Points: ${demeritCount}`)
     if (demeritCount >= maxDemerits) { //if the users demerits are greater than 12 then a message is printed informing them that their license is suspended
       console.log("License suspended")
@@ -45,7 +47,7 @@ let paye; //Defining the Pay As You Earn (PAYE) tax
 let nhifDeduction; //Defining the deduction taken by the NHIF
 let payeTaxableIncome; //Defining the income taxable by the PAYE tax
 let pensionContributionPercentage = 0.06; //Defining the percentage of the gross salary taken by the NSSF
-let nssfDeduction = pensionContributionPercentage * grossSalary; //Defining the deduction taken by the NSSF
+let nssfDeduction = Math.round(pensionContributionPercentage * grossSalary); //Defining the deduction taken by the NSSF
 let nssfDeductionTierOneMax = 6000; //Defining the limit of pensionable pay for the tier 1 contribution to the NSSF
 let nssfDeductionTierTwoMax = 18000; //Defining the limit of pensionable pay for the tier 2 contribution to the NSSF
 let netSalary; //Defining the net salary of the individual
@@ -118,17 +120,17 @@ if (nssfDeduction > 0 && nssfDeduction < nssfDeductionTierOneMax) { //if stateme
 
 if (payeTaxableIncome > 0 && payeTaxableIncome <= 24000) { //if statements that calculate the Pay As You Earn (PAYE) tac
   tax = 0.1
-  paye = tax * payeTaxableIncome;
+  paye = Math.round(tax * payeTaxableIncome);
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
 } else if (payeTaxableIncome > 24000 && payeTaxableIncome <= 32333) {
   tax = 0.25
-  paye = tax * payeTaxableIncome;
+  paye = Math.round(tax * payeTaxableIncome);
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
 } else if (payeTaxableIncome > 32333) {
   tax = 0.3
-  paye = tax * payeTaxableIncome;
+  paye = Math.round(tax * payeTaxableIncome);
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
 } else {
