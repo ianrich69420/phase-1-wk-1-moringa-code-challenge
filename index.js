@@ -1,7 +1,7 @@
 const prompt=require("prompt-sync")({sigint:true}); //Installing prompt dependencies
 
 function studentGradeGenerator(marks) { //Defining the function the will generate the Student Grades
-  marks = prompt("Please enter the student marks correctly", 100) //Prompting the user to input the marks to be converted
+  marks = prompt("Please enter the student marks correctly", 0) //Prompting the user to input the marks to be converted
 
   if (marks > 79 && marks <= 100) { //if statement accounting for the requirements for a grade A
     console.log("A")
@@ -40,7 +40,7 @@ function speedDetector(speed) { //Defining the function that will calculate the 
 
 function netSalaryCalculator(basicSalary, benefits) { //Defining the function that will take in the basic salary of the individual
 basicSalary = prompt("Please enter the basic salary correctly") //Prompting the user to input their basic salary
-benefits = prompt("Please enter the monetary benefits you received correctly") //Prompting the user to input their benefits
+benefits = prompt("Please enter the monetary benefits you received correctly or press ENTER if no benefits received", 0) //Prompting the user to input their benefits
 let grossSalary = Number(basicSalary) + Number(benefits); //Defining the gross salary of the individual
 let tax; //Defining the tax applied to the basic salary
 let paye; //Defining the Pay As You Earn (PAYE) tax
