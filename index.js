@@ -1,4 +1,4 @@
-const prompt=require("prompt-sync")({sigint:true});
+const prompt=require("prompt-sync")({sigint:true}); //Installing prompt dependencies
 
 function studentGradeGenerator(marks) { //Defining the function the will generate the Student Grades
   marks = prompt("Please enter the student marks correctly", 100) //Prompting the user to input the marks to be converted
