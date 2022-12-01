@@ -31,11 +31,11 @@ In order for you to use the content on this repo ensure you have the following:
 - Open a terminal on your computer
 - Clone the repo by using the following:
 
-        git clone https://github.com/otsembo/l1-js-dom.git
+        git clone https://github.com/ianrich69420/phase-1-wk-1-moringa-code-challenge
 
 - After the repository has been cloned succesfully change directory to the repository folder:
 
-        cd l1-js-dom
+        cd phase-1-wk-1-moringa-code-challenge
 
 - Open it in a text editor of your choice, however I personally prefer using VSCode so in order to open the folder in VSCode do the following:
 
