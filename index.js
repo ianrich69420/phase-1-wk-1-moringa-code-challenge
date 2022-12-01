@@ -1,7 +1,7 @@
 const prompt=require("prompt-sync")({sigint:true}); //Installing prompt dependencies
 
 function studentGradeGenerator(marks) { //Defining the function the will generate the Student Grades
-  marks = prompt("Please enter the student marks correctly", 0) //Prompting the user to input the marks to be converted
+  marks = prompt("Please enter the student marks correctly") //Prompting the user to input the marks to be converted
 
   if (marks > 79 && marks <= 100) { //if statement accounting for the requirements for a grade A
     console.log("A")
@@ -20,12 +20,14 @@ function studentGradeGenerator(marks) { //Defining the function the will generat
 }
 
 function speedDetector(speed) { //Defining the function that will calculate the speeds
-  speed = prompt("Please enter the speed correctly", 70)
+  speed = prompt("Please enter the speed correctly", 0)
   const speedLimit = 75 //Defining the speed limit
   let demeritCount = 0 //Initializing a counter for the demerits
   const maxDemerits = 12 //Defining the maximum number of demerits before license suspension
-
-  if (speed > 0 && speed < speedLimit) { //if statement accounting for speeds that are not eligible to receive a demerit
+  
+  if (speed = 0) { //Accounting for the car being stationary
+    console.log("No amount of speed detected")
+  } else if (speed > 0 && speed < speedLimit) { //if statement accounting for speeds that are not eligible to receive a demerit
     console.log("Ok")
   } else if (speed >= speedLimit) { //if statement accounting for the amount of demerits the speed is eligible for
     demeritCount = Math.floor((speed - 70) / 5)
@@ -39,7 +41,7 @@ function speedDetector(speed) { //Defining the function that will calculate the 
 }
 
 function netSalaryCalculator(basicSalary, benefits) { //Defining the function that will take in the basic salary of the individual
-basicSalary = prompt("Please enter the basic salary correctly") //Prompting the user to input their basic salary
+basicSalary = prompt("Please enter the basic salary correctly or press ENTER if no salary received", 0) //Prompting the user to input their basic salary
 benefits = prompt("Please enter the monetary benefits you received correctly or press ENTER if no benefits received", 0) //Prompting the user to input their benefits
 let grossSalary = Number(basicSalary) + Number(benefits); //Defining the gross salary of the individual
 let tax; //Defining the tax applied to the basic salary
