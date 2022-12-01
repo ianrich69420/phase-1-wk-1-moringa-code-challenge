@@ -46,7 +46,7 @@ You can use the following steps to run the app:
 - Install required dependencies from npm
 
       npm install
-      npm prompt-sync   
+      npm install prompt-sync   
 
 - Run the application
 
