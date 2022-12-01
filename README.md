@@ -31,7 +31,7 @@ In order for you to use the content on this repo ensure you have the following:
 - Open a terminal on your computer
 - Clone the repo by using the following:
 
-        git clone https://github.com/ianrich69420/phase-1-wk-1-moringa-code-challenge
+        git clone https://github.com/ianrich69420/phase-1-wk-1-moringa-code-challenge.git
 
 - After the repository has been cloned succesfully change directory to the repository folder:
 
