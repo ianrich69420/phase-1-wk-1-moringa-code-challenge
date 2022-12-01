@@ -138,3 +138,7 @@ if (payeTaxableIncome > 0 && payeTaxableIncome <= 24000) { //if statements that 
 console.log(`Your Gross Salary is ${grossSalary}`) //prints out the individual's gross salary
 console.log(`Your Net Salary is ${netSalary}`) //prints out the individual's gross salary
 }
+
+studentGradeGenerator();
+speedDetector();
+netSalaryCalculator();
