@@ -20,14 +20,12 @@ function studentGradeGenerator(marks) { //Defining the function the will generat
 }
 
 function speedDetector(speed) { //Defining the function that will calculate the speeds
-  speed = prompt("Please enter the speed correctly", 0)
+  speed = prompt("No speed detected, please enter the speed correctly")
   const speedLimit = 75 //Defining the speed limit
   let demeritCount = 0 //Initializing a counter for the demerits
   const maxDemerits = 12 //Defining the maximum number of demerits before license suspension
   
-  if (speed === 0) { //Accounting for the car being stationary
-    console.log("No amount of speed detected")
-  } else if (speed > 0 && speed < speedLimit) { //if statement accounting for speeds that are not eligible to receive a demerit
+  if (speed > 0 && speed < speedLimit) { //if statement accounting for speeds that are not eligible to receive a demerit
     console.log("Ok")
   } else if (speed >= speedLimit) { //if statement accounting for the amount of demerits the speed is eligible for
     demeritCount = Math.floor((speed - 70) / 5)
