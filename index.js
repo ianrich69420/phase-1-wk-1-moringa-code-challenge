@@ -123,22 +123,25 @@ if (payeTaxableIncome > 0 && payeTaxableIncome <= 24000) { //if statements that 
   paye = Math.round(tax * payeTaxableIncome);
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
+  console.log(`Your Gross Salary is ${grossSalary}`) 
+  console.log(`Your Net Salary is ${netSalary}`) 
 } else if (payeTaxableIncome > 24000 && payeTaxableIncome <= 32333) {
   tax = 0.25
   paye = Math.round(tax * payeTaxableIncome);
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
+  console.log(`Your Gross Salary is ${grossSalary}`) 
+  console.log(`Your Net Salary is ${netSalary}`) 
 } else if (payeTaxableIncome > 32333) {
   tax = 0.3
   paye = Math.round(tax * payeTaxableIncome);
   netSalary = payeTaxableIncome - paye
   console.log(`Your PAYE is ${paye}`)
+  console.log(`Your Gross Salary is ${grossSalary}`) 
+  console.log(`Your Net Salary is ${netSalary}`) 
 } else {
   netSalary = `less than 0, no need to pay tax` //Accounting for lower than taxable income
 }
-
-console.log(`Your Gross Salary is ${grossSalary}`) //prints out the individual's gross salary
-console.log(`Your Net Salary is ${netSalary}`) //prints out the individual's gross salary
 }
 
 studentGradeGenerator();
