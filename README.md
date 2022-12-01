@@ -41,11 +41,12 @@ In order for you to use the content on this repo ensure you have the following:
 
         code .
 
-You can use the following steps to run the app.
+You can use the following steps to run the app:
 
 - Install required dependencies from npm
 
       npm install
+      npm prompt-sync   
 
 - Run the application
 
